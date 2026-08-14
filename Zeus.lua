@@ -34,9 +34,9 @@ local Themes = {
 }
 
 local Fonts = {
-	Gotham = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium),
-	GothamBold = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold),
-	Code = Font.new("rbxasset://fonts/families/RobotoMono.json", Enum.FontWeight.Regular),
+	Gotham = Enum.Font.Gotham,
+	GothamBold = Enum.Font.GothamBold,
+	Code = Enum.Font.Code,
 }
 
 local function Create(class, props, children)
@@ -956,7 +956,7 @@ function ZeusLib:CreateUISettingsTab()
 	})
 
 	section:AddButton({
-		Name = "UI zurücksetzen",
+		Name = "Reset UI",
 		Callback = function()
 			self:SetTheme("Pink")
 			self:SetFont("GothamBold")
